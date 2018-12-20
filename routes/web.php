@@ -12,3 +12,6 @@
 */
 
 Route::get('/', 'HomeController@index') ;
+Route::get('/booksearch', 'BookController@index') ;
+Route::get('/ordersearch', 'OrderController@index') ;
+
