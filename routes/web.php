@@ -15,3 +15,7 @@ Route::get('/', 'HomeController@index') ;
 Route::get('/booksearch', 'BookController@index') ;
 Route::get('/ordersearch', 'OrderController@index') ;
 
+Route::auth();
+Route::get('/home', function () {
+    return view('home');
+});
