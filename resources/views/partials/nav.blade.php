@@ -14,7 +14,7 @@
                 <a href="">購物車</a>
             </li>
             <li>
-                <a href="">訂單查詢</a>
+                <a href="{{ action('OrderController@index') }}">訂單查詢</a>
             </li>
         </ul>
     </div>
