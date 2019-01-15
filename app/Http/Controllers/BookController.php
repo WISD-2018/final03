@@ -7,6 +7,9 @@ use Illuminate\Http\Request;
 class BookController extends Controller
 {
     public function index(){
-        return view('books.search');
+        $tasks=null;
+        return view('books.search', [
+            'tasks' => $tasks,
+        ]);
     }
 }
