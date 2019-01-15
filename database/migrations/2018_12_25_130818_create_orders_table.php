@@ -15,13 +15,12 @@ class CreateOrdersTable extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->increments('id');
-            $table->unsignedInteger('member_id');
-            $table->foreign('member_id')->references('id')->on('users');
+            $table->unsignedInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users');
             $table->string('order_date');
             $table->integer('total');
         });
     }
-
     /**
      * Reverse the migrations.
      *

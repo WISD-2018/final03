@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Book;
 use Illuminate\Http\Request;
 
 class BookController extends Controller
@@ -11,6 +12,12 @@ class BookController extends Controller
         return view('books.search', [
             'tasks' => $tasks,
         ]);
+    }
+
+    public function show($id){
+        $book=Book::find($id);
+        $data=['book'=>$book];
+        return view('books.index', $data);
     }
 
     public function search(Request $request){
