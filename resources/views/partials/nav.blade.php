@@ -9,21 +9,34 @@
         </ul>
         <ul class="nav navbar-nav navbar-right" >
             @if (Route::has('login'))
-                @auth
-                    <li>
-                        <a href="{{ url('/home') }}">會員資料</a>
+                @guest
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('login') }}"style="color:#9d9d9d;">{{ __('會員登入') }}</a>
                     </li>
-                @else
-                    <li>
-                        <a href="{{ route('login') }}">會員登入</a>
-                    </li>
-
                     @if (Route::has('register'))
-                        <li>
-                            <a href="{{ route('register') }}">會員註冊</a>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('register') }}"style="color:#9d9d9d;">{{ __('會員註冊') }}</a>
                         </li>
                     @endif
-                @endauth
+                @else
+                    <li class="nav-item dropdown">
+                        <a id="navbarDropdown" class="nav-link dropdown-toggle"style="color:#9d9d9d;" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                            {{ Auth::user()->name }} <span class="caret"></span>
+                        </a>
+
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="{{ route('logout') }}"
+                               onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                {{ __('登出') }}
+                            </a>
+
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                @csrf
+                            </form>
+                        </div>
+                    </li>
+                @endguest
             @endif
             <li>
                 <a href="{{ action('CartController@index') }}">購物車</a>
