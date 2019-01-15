@@ -26,7 +26,7 @@
                 @endauth
             @endif
             <li>
-                <a href="">購物車</a>
+                <a href="{{ action('CartController@index') }}">購物車</a>
             </li>
             <li>
                 <a href="{{ action('OrderController@index') }}">訂單查詢</a>
