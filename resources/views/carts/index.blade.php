@@ -16,14 +16,14 @@
                         <th width="100" style="text-align: center"></th>
                     </tr>
                     </thead>
-                    <tbody><div style="display: none"></div>
-                    
+                    <tbody><?PHP $i=0;?><div style="display: none">{{$total=0}}</div>
+                    @foreach ($carts as $cart)
 
                         <tr>
-                            <td style="text-align: center"><img src="" style="height: 100px;" ></td>
-                            <td ><br><br>}</td>
-                            <td style="text-align: center"><br><br></td>
-                            <td style="text-align: center"><br><br></td>
+                            <td style="text-align: center"><img src="{{ $cart->imgurl}}" style="height: 100px;" ></td>
+                            <td ><br><br>{{ $cart->book_name}}</td>
+                            <td style="text-align: center"><br><br>{{ $cart->book_price}}</td>
+                            <td style="text-align: center"><br><br>{{ $cart->count}}</td>
                             </td>
                             <td  style="text-align: center; : 20px"><br>
                                 <div>
@@ -42,14 +42,15 @@
                                 </div>
                             </td>
                         </tr>
-                        <div style="display: none"></div>
-
+                        <div style="display: none">{{$total=$cart->book_price* $cart->count+$total}}</div>
+                        <?PHP $i++;?>
+                    @endforeach
                     </tbody>
                 </table>
             </div>
             <div class="text-right">
                 <h4 style="color:red">
-                    總金額：
+                    總金額：{{$total}}
                 </h4>
             </div>
         </div>
