@@ -19,3 +19,13 @@
 2. Admin
 > 帳號:your@email.com 密碼:admintest
 
+## 網站安裝
+1. > git clone https://github.com/WISD-2018/final03.git
+2. > composer install
+3. > composer run-script post-root-package-install
+4. > composer run-script post-create-project-cmd
+5. > 匯入資料庫 https://github.com/WISD-2018/final03/blob/master/database/final03.sql
+
+## 額外使用套件
+- voyager(提供快速的後台管理)
+
