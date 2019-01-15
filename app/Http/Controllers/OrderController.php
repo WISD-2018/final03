@@ -27,5 +27,13 @@ class OrderController extends Controller
             'orders' => $orders,
         ]);
     }
+    public function checkout(Request $request){
+
+        $carts =Cart::where('user_id', $request->user()->id)->get();
+
+        return view('orders.checkout', [
+            'carts' => $carts,
+        ]);
+    }
 
 }
