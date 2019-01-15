@@ -49,4 +49,22 @@ class CartController extends Controller
         //return redirect('/');
         return view('books.index', $data);
     }
+    public function destroy($id)
+    {
+        Cart::destroy($id);
+        return redirect('/carts');
+    }
+    public function edit($id)
+    {
+        $cart=Cart::find($id);
+        $data = ['cart' => $cart];
+
+        return view('carts.edit', $data);
+    }
+    public function update(Request $request,$id)
+    {
+        $cart=Cart::find($id);
+        $cart->update($request->all());
+        return redirect('/carts');
+    }
 }
