@@ -182,7 +182,7 @@ a.type03_button01 {color:#333;}
 }
 .type03_tabs_b li.here span { background:#94c722; }
 .type03_tabs_b li div{ 
- height:30px;
+ height:00px;
  line-height:30px;
  overflow:hidden;
  text-align:center;
@@ -192,7 +192,7 @@ a.type03_button01 {color:#333;}
  background:#eee;
 }
 .type03_tabs_b h3 { 
- height:30px;
+ height:00px;
  line-height:30px;
  font-size:116%;
  font-weight:bold;
