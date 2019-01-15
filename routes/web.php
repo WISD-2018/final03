@@ -30,3 +30,8 @@ Route::auth();
 Route::get('/home', function () {
     return view('home');
 });
+
+
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
+});
