@@ -12,26 +12,26 @@
 - 訂單資訊查詢
 - 後台功能(http://localhost:8000/admin/ )書籍、會員、訂單資訊修改(需使用Admin帳號)
 
-## User data
-1. default user
-> 帳號:ncut@gmail.com 密碼:ncutgmail
+## 初始專案與DB負責人
+1. 初始專案負責人:[白貫良](https://github.com/3A532088)
+2. DB建置負責人:[謝宗均](https://github.com/3A532090)
 
-2. Admin
-> 帳號:your@email.com 密碼:admintest
+## 額外使用套件
+- voyager(提供快速的後台管理)
 
-## 網站安裝
+## 系統復原步驟
 1. > git clone https://github.com/WISD-2018/final03.git
 2. > composer install
 3. > composer run-script post-root-package-install
 4. > composer run-script post-create-project-cmd
 5. > 匯入資料庫 https://github.com/WISD-2018/final03/blob/master/database/final03.sql
 
-## 額外使用套件
-- voyager(提供快速的後台管理)
+## User data
+1. default user
+> 帳號:ncut@gmail.com 密碼:ncutgmail
 
-## 初始專案與DB負責人
-1. 初始專案負責人:[白貫良](https://github.com/3A532088)
-2. DB建置負責人:[謝宗均](https://github.com/3A532090)
+2. Admin
+> 帳號:your@email.com 密碼:admintest
 
 ## 系統開發人員
 1. [白貫良](https://github.com/3A532088)：
